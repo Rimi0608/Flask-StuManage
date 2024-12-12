@@ -1,0 +1,46 @@
+{% extends "base.html" %}
+
+{% block title %}
+Search Student
+{% endblock %}
+
+{% block content %}
+
+<h2>Search Student</h2>
+    
+<form method="post">
+    <label for="fname">First Name:</label>
+    <input type="text" id="fname" name="fname">
+    <button type="submit">Search</button>
+</form>
+
+{% if students %}
+    <table class="student-table">
+        <thead>
+            <tr>
+                <th class="center-align">Index</th>
+                <th class="center-align">First Name</th>
+                <th class="center-align">Last Name</th>
+                <th class="center-align">Email</th>
+                <th class="center-align">Phone</th>
+                <th class="center-align">Grade</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for student in students %}
+            <tr>
+                <td class="center-align">{{ student.0 }}</td>
+                <td class="center-align">{{ student.1 }}</td>
+                <td class="center-align">{{ student.2 }}</td>
+                <td class="center-align">{{ student.3 }}</td>
+                <td class="center-align">{{ student.4 }}</td>
+                <td class="center-align">{{ student.5 }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+{% else %}
+    <p>No students found</p>
+{% endif %}
+
+{% endblock %}

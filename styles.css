@@ -1,0 +1,153 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #c7bba7;
+}
+
+header {
+    background-color: #6e4c3e;
+    color: white;
+    padding: 1rem;
+    text-align: center;
+}
+
+header nav a {
+    color: white;
+    margin: 0 1rem;
+    font-size: 1.4rem;
+    text-decoration: none;
+}
+
+header nav a:hover {
+    text-decoration: underline;
+    font-weight: bold;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button {
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 19px;
+    font-weight: bold;
+    background-color: #6e4c3e;
+    margin: 4px 2px;
+    cursor: pointer;
+    }
+
+.alert {
+    padding: 1rem;
+    margin-bottom: 1rem;
+    border: 1px solid transparent;
+    border-radius: 5px;
+}
+
+.alert-success {
+    color: #155724;
+    background-color: #d4edda;
+    border-color: #c3e6cb;
+}
+
+.alert-danger {
+    color: #721c24;
+    background-color: #f8d7da;
+    border-color: #f5c6cb;
+}
+
+/* Add more styles if needed for other categories */
+
+
+main {
+    padding: 2rem;
+    font-size: 1.5rem;
+}
+
+.homecon {
+    background-color: #c7bba7;
+    padding: 1rem;
+}
+
+form {
+    margin-top: 1rem;
+}
+
+form label {
+    display: block;
+    margin: 0.5rem 0;
+}
+
+form input {
+    padding: 0.5rem;
+    width: 100%;
+    max-width: 300px;
+    margin-bottom: 1rem;
+}
+
+form button {
+    padding: 0.5rem 1rem;
+    background-color: #675b5c;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #a59094;
+}
+
+.left-align {
+    text-align: left;
+}
+  
+.center-align {
+    text-align: center;
+}
+  
+.right-align {
+    text-align: right;
+}
+
+/* styles.css */
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #f2f2f2;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+footer {
+    position:fixed;
+    bottom:0;
+    background-color: #6e4c3e;
+    font-family: Tahoma, Arial;
+    font-size: 1rem;
+    color: White;
+    height: 1.5em;
+    width: 100%;
+    align-content: center;
+    align-items: center;
+    text-align: center;
+  }
+
+/* tr:hover {
+    background-color: #f2f2f2;
+} */
+
+  
+ 

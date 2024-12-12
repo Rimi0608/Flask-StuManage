@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <header>
+        <h1>Student Management System</h1>
+        <nav>
+            <a href="{{ url_for('home') }}">Home</a>
+            <a href="{{ url_for('add_student') }}">Add Student</a>
+            <a href="{{ url_for('search_student') }}">Search Student</a>
+        </nav>
+    </header>
+    <main>
+        {% block content %}
+    <div class="homecon">
+    <h2>Welcome to the Student Management System</h2>
+    <p>
+        Manage student records efficiently with this simple application. You can:
+    </p>
+    <ul>
+        <li><strong>Add Student Details:</strong> Record new student information including their name and grade.</li>
+        <li><strong>Search Student Records:</strong> Quickly search for students by their name.</li>
+    </ul>
+    <p>
+        Use the navigation links above or the buttons below to get started!
+    </p>
+    <button class="butn" onclick= "window.location.href=' {{ varadd }}'; " > Add Student </button>
+    <button class="butn" onclick= "window.location.href=' {{ varsrc }}'; "> Search Student</button>
+    </div>
+ <!-- Display flash messages -->
+ {% with messages = get_flashed_messages(with_categories=true) %}
+ {% if messages %}
+     <div class="messages">
+         {% for category, message in messages %}
+             <div class="alert {{ 'alert-' + category }}">
+                 {{ message }}
+             </div>
+         {% endfor %}
+     </div>
+ {% endif %}
+{% endwith %}
+
+{% endblock %}
+
+    </main>
+</body>
+<footer>
+    This webpage is developed by Rishab Kumar(2024UCS1587)
+</footer>
+</html>
